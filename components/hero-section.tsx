@@ -5,7 +5,7 @@ import gsap from "gsap"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import BlurText from "./blur-text"
-import SplashCursor from './SplashCursor'
+
 
 
 export default function HeroSection() {
@@ -32,7 +32,7 @@ export default function HeroSection() {
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center pt-20 px-4 overflow-hidden">
       {/* Background Image */}
-      <SplashCursor />
+      
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-white/60 z-10" /> {/* Overlay for readability */}
         <img

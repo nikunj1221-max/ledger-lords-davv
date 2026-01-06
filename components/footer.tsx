@@ -32,8 +32,18 @@ export default function Footer() {
   }, [])
 
   return (
-    <footer ref={footerRef} className="bg-white border-t border-gray-200/50 py-16 px-4">
-      <div className="max-w-5xl mx-auto">
+    <footer ref={footerRef} className="relative bg-white border-t border-gray-200/50 py-16 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-white/70 z-10" /> {/* Overlay for readability */}
+        <img
+          src="/bgimg.jpeg"
+          alt="Footer Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto">
         <div className="backdrop-blur-xl bg-white/50 border border-gray-200/50 rounded-xl p-12 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
             {/* Brand */}

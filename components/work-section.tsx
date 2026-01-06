@@ -54,8 +54,18 @@ export default function WorkSection() {
   ]
 
   return (
-    <section className="py-24 px-4 bg-white overflow-hidden">
-      <div className="max-w-5xl mx-auto mb-16">
+    <section className="relative py-24 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-white/70 z-10" /> {/* Overlay for readability */}
+        <img
+          src="/bgimg.jpeg"
+          alt="Work Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto mb-16">
         <h2 ref={titleRef} className="text-4xl md:text-5xl font-bold text-gray-900 text-center">
           Our Stories & Achievements
         </h2>

@@ -35,7 +35,7 @@ export default function AboutSection() {
 
     return () => ctx.revert()
   }, [])
-            
+
   const cards = [
     {
       title: "Innovation",
@@ -52,8 +52,18 @@ export default function AboutSection() {
   ]
 
   return (
-    <section ref={containerRef} className="py-24 px-4 bg-white">
-      <div className="max-w-5xl mx-auto">
+    <section ref={containerRef} className="relative py-24 px-4 overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-white/70 z-10" /> {/* Overlay for readability */}
+        <img
+          src="/bgimg.jpeg"
+          alt="About Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16 text-center">Why Choose CapScout</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
